@@ -1,4 +1,5 @@
 $fn = 100;
+scale = 1;
 
 include <vendor\DobloFactory\doblo-factory.scad>;
 baseHeight = 19.2;
