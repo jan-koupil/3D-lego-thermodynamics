@@ -1,4 +1,4 @@
-$fn = 30;
+$fn = 50;
 use <tile_module.scad>;
 include <tile_definitions.scad>;
 
