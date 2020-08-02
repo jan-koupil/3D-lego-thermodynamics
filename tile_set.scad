@@ -5,10 +5,10 @@ include <tile_definitions.scad>;
 // definitions to change
 tileSize = 32;
 gap = 4; // gap between tiles
-bedWidth = 100; //print bed dimensions
-bedLength = 150;
+bedWidth = 180; //print bed dimensions
+bedLength = 180;
 
-setNo = 1; // which group of tiles to create, start with 1
+setNo = 2; // which group of tiles to create, start with 1
 
 brimWidth = 4;
 brimThickness = 0.15;
@@ -22,6 +22,7 @@ sets = ceil (len(definitions) / setSize);
 
 startIndex = (setNo - 1) * setSize;
 endIndex = min (startIndex + setSize - 1, len(definitions) - 1);
+echo (len(definitions) - 1);
 echo(sets=sets, setNo=setNo, startIndex=startIndex, endIndex=endIndex, columns=columns, rows=rows);
 
 for (i = [startIndex : endIndex]) {
