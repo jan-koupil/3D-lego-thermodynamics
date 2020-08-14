@@ -2,7 +2,6 @@ $fn = 30;
 scale = 1;
 use <vendor\DobloFactory\doblo-factory.scad>;
 use <vendor\roundedcube.scad>; 
- 
 
 //tile (n = [0.15, 0.20, 1], h = 12, brimWidth = 4, brimThickness = 0.15);
 
@@ -14,29 +13,24 @@ module tile(
 ){
 
     // lego dimensions
-    play = 0.15;
-    baseDim = 8;
-    baseWidth = 4 * baseDim - 2 * play;
+    play = 0.15 / 2;
+    baseWidth = 32 - 2 * play;
     plateHeight = 3 * 3.2 - 0 * play;
 
     w = baseWidth / 2; // halfWidth
     d = w;             // halfLength
     epsilon = 0.05;
 
-    include <placka4.scad>; 
-    // include <vendor\DobloFactory\lib\doblo-params.scad>; 
+
+    include <vendor\DobloFactory\lib\doblo-params.scad>;
+
     // place platform lego tile
-
-// color("red")
-//     translate([-w, w, -plateHeight])
-//         translate([-play, play, 0])
-//                 // column  line z-pos width length  height  nibbles  diamonds,  size
-//             doblo   (0,     0,   0,    4,    4,      FULL,  false,   false,    LUGO);
-
 color("red")
-    translate([0,0,-plateHeight])
-            basePlate();
-
+    translate([-w, w, -plateHeight])
+        translate([-play, play, 0])
+                // column  line z-pos width length  height  nibbles  diamonds,  size
+            doblo   (0,     0,   0,    4,    4,      FULL,  false,   false,    LUGO);
+    
     //create printing "brim"
 color("green")
     if (brimWidth > 0 && brimThickness > 0)
