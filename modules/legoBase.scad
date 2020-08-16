@@ -16,9 +16,10 @@ module legoBase (
     epsilon = 0.05;
 
     // each inner barrel
-    innerR = 5 / 2;
+    // innerR = 5 / 2; // original lego value
+    innerR = 5 / 2 - 0.1;
     // outerR = 6.6 / 2; // original lego value
-    outerR = 6.2 / 2;
+    outerR = 6.3 / 2;
 
     innerWall = 1;     // inner wall thickness
 
@@ -66,10 +67,17 @@ module legoBase (
 
     // ceiling grating
     color("brown") {
-        turnAround(4) {
+        turnAround(2) {
             for(dx = [-1 : 1 : 1]){
-                translate([-nozzleWidth + dx * baseDim, -w, plateHeight - ceiling - layerHeight])
-                    cube([2 * nozzleWidth, baseWidth, layerHeight]);
+                translate([-nozzleWidth + dx * baseDim, -w, plateHeight - ceiling - 2 * layerHeight])
+                    cube([2 * nozzleWidth, baseWidth, 2 * layerHeight]);
+            }
+        }
+        turnAround(2) {
+            for(dx = [-1 : 1 : 1]){
+                rotate([0,0,90])
+                    translate([-nozzleWidth + dx * baseDim, -w, plateHeight - ceiling - layerHeight])
+                        cube([2 * nozzleWidth, baseWidth, layerHeight]);
             }
         }
     
