@@ -6,17 +6,17 @@ use <modules\tile_module.scad>;
 
 x=0; y=0; //magic code, only to initialize
 
-// creates brim on real outside only
-brimWidth = 3;
-brimThickness = 0; // set here, or leave 0 and use your slicer settings
-
 /* dQ */
 // midHeight = 38;
 // slopeN = [-95 / 12 * y, -57 / 12 * x, 32];
 
 /* dU */
-midHeight = 29;
-slopeN = [-57 / 12 * y, -57 / 12 * x, 32];
+// midHeight = 29;
+// slopeN = [-57 / 12 * y, -57 / 12 * x, 32];
+
+/* dW */
+midHeight = 9.4;
+slopeN = [-19 / 6 * y, 0, 32];
 
 //tile (n = slopeN, h = midHeight, brimWidth = brimWidth, brimThickness = brimThickness);
 tile (

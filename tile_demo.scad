@@ -1,9 +1,6 @@
 include <config.scad>;
 use <modules\tile_module.scad>;
 
-brimWidth = 0;
-brimThickness = 0.15;
-
 x = 6;
 y = 6;
 

@@ -17,7 +17,7 @@ module legoBase (
 
     // each inner barrel
     // innerR = 5 / 2; // original lego value
-    innerR = 5 / 2 - 0.1;
+    innerR = 5 / 2;
     // outerR = 6.6 / 2; // original lego value
     outerR = 6.3 / 2;
 
