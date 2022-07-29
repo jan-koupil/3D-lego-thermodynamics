@@ -67,21 +67,38 @@ module legoBase (
 
     // ceiling grating
     color("brown") {
-        turnAround(2) {
-            for(dx = [-1 : 1 : 1]){
-                translate([-nozzleWidth + dx * baseDim, -w, plateHeight - ceiling - 2 * layerHeight])
-                    cube([2 * nozzleWidth, baseWidth, 2 * layerHeight]);
-            }
-        }
-        turnAround(2) {
-            for(dx = [-1 : 1 : 1]){
-                rotate([0,0,90])
-                    translate([-nozzleWidth + dx * baseDim, -w, plateHeight - ceiling - layerHeight])
-                        cube([2 * nozzleWidth, baseWidth, layerHeight]);
-            }
-        }
-    
+        ceilingLogs(1);
+        rotate([0, 0, 90])
+            ceilingLogs(2);
     }
+
+    module ceilingLogs(level) {
+        translate([0, 0, plateHeight - ceiling - level * layerHeight]) {
+            rotate([0, 0, 45])        
+                cube([2 * nozzleWidth, sqrt(2) * (baseWidth - 4 * nozzleWidth), level * layerHeight], center = true);
+
+            translate([baseWidth / 4, baseWidth / 4, 0])
+                rotate([0, 0, 45])        
+                    cube([2 * nozzleWidth, sqrt(2) / 2 * (baseWidth - 4 * nozzleWidth), level * layerHeight], center = true);
+
+            translate([-baseWidth / 4, -baseWidth / 4, 0])
+                rotate([0, 0, 45])        
+                    cube([2 * nozzleWidth, sqrt(2) / 2 * (baseWidth - 4 * nozzleWidth), level * layerHeight], center = true);
+        }
+    }
+    // turnAround(2) {
+    //     for(dx = [-1 : 1 : 1]){
+    //         translate([-nozzleWidth + dx * baseDim, -w, plateHeight - ceiling - 2 * layerHeight])
+    //             cube([2 * nozzleWidth, baseWidth, 2 * layerHeight]);
+    //     }
+    // }
+    // turnAround(2) {
+    //     for(dx = [-1 : 1 : 1]){
+    //         rotate([0,0,90])
+    //             translate([-nozzleWidth + dx * baseDim, -w, plateHeight - ceiling - layerHeight])
+    //                 cube([2 * nozzleWidth, baseWidth, layerHeight]);
+    //     }
+    // }        
 
     module wall() {    
         color("red", 0.2)
