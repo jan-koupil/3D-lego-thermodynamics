@@ -16,7 +16,7 @@ ceiling = 1.4; //ceiling thickness - lego original value 1.6
 layerHeight = 0.2; //print layer height
 nozzleWidth = 0.4; //print nozzle width
 
-// creates brim on real outside only instead of slicer
+// creates brim on real outside only, instead of slicer
 brimWidth = 3;
 brimThickness = 0; // set here, or leave 0 and use your slicer settings
 
