@@ -1,4 +1,4 @@
-# LEGO-based Thermodynamics set - Total and partial differentials
+# LEGO-based Thermodynamics teaching set - Total and partial differentials
 
 This repository contains OpenSCAD sources to generate tiles for hands-on teaching thermodynamics (integration over d*W*, d*Q*, d*U*).
 
@@ -22,6 +22,10 @@ These tiles had been tuned for a single and specific 3D printer (as usual). You 
 * ``baseType`` - change the underlying LEGO-like tile type (see file for possible values, the difference is in the shape of bottom nops and supports of top plate)
 * dimensions of the brick - valid only for baseTypes other than ``"doblo-factory"``
 * The bricks are rounded and calculated for a specific layer height and nozzle width, don't forget to update these if using different printer.
+
+## STLs
+
+If you just want the STLs without customization, all can be donwloaded at https://www.thingiverse.com/thing:5444315
 
 ## Printed tiles
 
