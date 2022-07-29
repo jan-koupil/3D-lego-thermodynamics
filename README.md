@@ -26,12 +26,15 @@ These tiles had been tuned for a single and specific 3D printer (as usual). You 
 ## Printed tiles
 
 ![Full set of tiles (dQ)](photo/tileset.JPG?raw=true "Full set of tiles (dQ)")
+
 Full set of d*Q* tiles on a plate, without supporting bricks
 
 ![Full set of tiles (dU)](photo/tiles_on_supporting_bricks.JPG?raw=true "Full set of tiles (dU)")
+
 Full set of d*U* tiles on a plate, supported by regular LEGO/SUPLO bricks to connect smoothly
 
 ![Two ways of integration](photo/two-way-integration.JPG?raw=true "Two ways of integration (dW)")
+
 Two ways of integration (d*W*) over two paths (ideal gas, isobaric first and isothermic and vice versa).
 
 
